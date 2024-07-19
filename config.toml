@@ -1,0 +1,44 @@
+# theme
+theme = "ayu_mirage"  # dark_plus works well with hx --tutor.
+
+[editor]
+color-modes = true
+line-number = "relative"
+
+true-color = true
+
+[editor.indent-guides]
+render = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = ""
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+
+
+
+
+[keys.insert]
+esc = ["collapse_selection", "normal_mode"]
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+ret = ["move_line_down", "goto_first_nonwhitespace"]
+0   = "goto_line_start"
+
+[keys.select]
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+0   = "goto_line_start"
